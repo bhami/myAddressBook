@@ -66,7 +66,7 @@ function GenerateHTMLForm($formValues, $actionScript, $submitLabel) {
     printf("<FORM METHOD=post NAME=form1 ACTION=\"%s\"><PRE>\n", $actionScript);
 
     printf("Name:
-            <INPUT TYPE=text SIZE=35 NAME=cn VALUE=\"%s\">
+            <INPUT TYPE=text ID=name SIZE=35 NAME=cn VALUE=\"%s\">
             <BR>\n", ($formValues) ? $formValues["cn"] : "");
 
     printf("Email:
@@ -98,7 +98,7 @@ function GenerateHTMLForm($formValues, $actionScript, $submitLabel) {
         printf("<INPUT TYPE=\"submit\"  VALUE=\"%s\">", $submitLabel);
     } else {
      printf("<INPUT TYPE=submit NAME=submit VALUE=\"%s\" 
-              onclick= \"ValidateEmail();\">", $submitLabel);
+              onclick= \"ValidateForm();\">", $submitLabel);
     }
      printf("</PRE></FORM>");
 }

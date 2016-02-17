@@ -94,9 +94,12 @@ function GenerateHTMLForm($formValues, $actionScript, $submitLabel) {
 
     
     //printf("<INPUT TYPE=\"submit\"  VALUE=\"%s\">", $submitLabel);
-   
+    if ($submitLabel == "SEARCH"){
+        printf("<INPUT TYPE=\"submit\"  VALUE=\"%s\">", $submitLabel);
+    } else {
      printf("<INPUT TYPE=submit NAME=submit VALUE=\"%s\" 
               onclick= \"ValidateEmail();\">", $submitLabel);
+    }
      printf("</PRE></FORM>");
 }
 

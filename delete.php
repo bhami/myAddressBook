@@ -9,11 +9,11 @@ $rowid =%$_SERVER[QUERY_STRING];
 echo $rowid;
 */
 $rowid = $_GET['rowid'];
-echo "rowid=$rowid";
+//echo "rowid=$rowid";
 
                 
 $deleteStmt = "DELETE from $tableName where ROWID=$rowid";
-    echo "deleteStmt =$deleteStmt";
+    //echo "deleteStmt =$deleteStmt";
 
 // open a pesistent connection with database server
 if(!($link=mysql_pconnect($hostName, $userName, $password))) {
